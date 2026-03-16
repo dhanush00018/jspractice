@@ -1,0 +1,45 @@
+Devops-Program 1
+
+git --version
+git config --global user.name "Chiranthan117"
+git config --global user.email "chiranthan117@gmail.com"
+git config --list
+
+mkdir lab1
+cd lab1
+git init
+touch index.txt
+git status
+echo "Good Morning"> index.txt
+git add index.txt
+git add .
+git commit -m "initial commit"
+git log
+
+Go to git hub create a repository
+
+git remote add origin ______
+git branch -m main
+git push -u origin main
+git clone ______
+git reset --hard
+
+
+Devops-Program 3
+
+sudo apt update
+sudo apt install openjdk-21-jdk -y
+sudo rm jenkins.war
+sudo rm -rf ~/.jenkins
+wget https://get.jenkins.io/war-stable/latest/jenkins.war
+java -jar jenkins.war httpPort=8090
+
+jenkinsfile
+
+
+
+sudo apt update
+sudo apt install snapd -y
+sudo snap install ngrok
+ngrok url
+ngrok http 8090
