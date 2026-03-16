@@ -35,7 +35,27 @@ wget https://get.jenkins.io/war-stable/latest/jenkins.war
 java -jar jenkins.war httpPort=8090
 
 jenkinsfile
+pipeline {
+    agent any
 
+    stages {
+
+        stage('Clone') {
+            steps {
+                git url: 'https://github.com/dhanush00018/jenkin-simple-demo.git',
+                    branch: 'main'
+            }
+        }
+
+        stage('Run Script') {
+            steps {
+                sh 'chmod +x script.sh'
+                sh './script.sh'
+            }
+        }
+
+    }
+}
 
 
 sudo apt update
